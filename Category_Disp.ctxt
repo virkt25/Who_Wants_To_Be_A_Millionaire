@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=cat\ amt\ bank
+comment0.target=void\ disp(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ This\ method\ is\ used\ create\ the\ Dialog\ and\ display\ it\ on\ the\ Screen\r\n\ \r\n\ @param\ cat\ \ \ \ \ \ \ String\ that\ contains\ the\ Category\ of\ the\ Next\ Upcoming\ Question\r\n\ @param\ amt\ \ \ \ \ \ \ String\ Containing\ the\ Amount\ the\ Next\ Question\ is\ Worth\r\n\ @param\ bank\ \ \ \ \ \ String\ containing\ the\ Amount\ the\ user\ has\ won.\r\n
+numComments=1

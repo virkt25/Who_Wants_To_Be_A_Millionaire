@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=questions\ question_num\ exp
+comment0.target=void\ expDisp(java.lang.String[][],\ int,\ int)
+comment0.text=\r\n\ This\ class\ creates\ a\ Jdialog\ with\ the\ Expert's\ Response\ and\ display's\ it\ on\ the\ \r\n\ screen.\r\n\ \r\n\ @param\ questions\ \ \ \ \ \ \ \ \ Double\ String\ Array\ contining\ the\ question\ set\ being\ used\ for\ the\ current\ game.\r\n\ @param\ question_num\ \ \ \ \ \ Int\ containing\ the\ Question\ number\ for\ which\ the\ user\ needs\ help.\r\n\ @param\ exp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Int\ containing\ the\ Expert\ \#\ for\ the\ expert\ that\ was\ Assigned\ to\ the\ Player.\r\n
+numComments=1

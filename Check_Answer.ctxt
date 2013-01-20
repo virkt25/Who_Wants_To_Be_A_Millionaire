@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ ans()
+comment0.text=\r\n\ This\ method\ checks\ the\ Answer\ the\ user\ has\ selected\r\n\ with\ the\ answer\ on\ File\ (ARRAY)\ and\ takes\ the\ appropriate\ Action.\r\n
+numComments=1

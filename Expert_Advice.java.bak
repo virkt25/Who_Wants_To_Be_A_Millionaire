@@ -1,0 +1,118 @@
+// Import Statements
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import layout.TableLayout;
+
+/**
+ * 
+ * 
+ * 
+ * @author (Gurbir Dhulla) 
+ * @version (v.1 12JAN2011)
+ */
+
+public class Expert_Advice extends Millionaire     // name of the class
+{
+    // Variables Declared
+    static ImagePanel expMP, expP;
+
+    static JDialog expDisp = new JDialog ();
+
+    static JPanel display = new JPanel ();
+
+    static ArrayList arr = new ArrayList ();
+
+    static String option = "";
+    static String introBackground = "images/ll_bg.png";
+    
+    static String questions [][] = new String [15][10];
+
+    static int q, question_num;
+
+    private static double size[][] = {{TableLayout.FILL}, {TableLayout.FILL}};
+    private static double size2 [][] = {{0.15, TableLayout.FILL}, {0.3, TableLayout.FILL}};
+    private static double size3 [][] = {{0.605, 0.35, 0.05}, {0.865, 0.095, 0.1}};
+
+    static JLabel temp_label;
+
+    static JLabel continueL = new JLabel ("Continue");
+
+    static TransparentButton continueB = new TransparentButton ("");
+
+    static TransparentButtonHandler handlerC = new TransparentButtonHandler ();
+    static MP3 expMP3 = new MP3("audio/AskTheExpertIntro.mp3");
+    
+    public static void expDisp (String [][] questions, int question_num, int exp) throws IOException
+    {
+        expMP3.play();
+        
+        String exp_img = "images/ex_"+exp+".png";
+
+        // Adding Button To Handler
+        continueB.addActionListener (handlerC);
+
+        //Setting Up Labels
+        continueL.setFont (new Font("Serif", Font.BOLD, 20));
+        continueL.setForeground (Color.WHITE);
+
+        // Setting properties of Main Panel  
+        expMP = new ImagePanel(new ImageIcon(introBackground).getImage());
+        expMP.setLayout (new TableLayout (size));
+        expMP.setOpaque (false);
+        expMP.setVisible (true);
+
+        // Setting Up The Sub Panel
+        expP = new ImagePanel(new ImageIcon(exp_img).getImage());
+        expP.setLayout (new TableLayout (size2));
+        expP.setOpaque (false);
+        expP.setVisible (true);
+
+        // Setting Invisible Display Panel for Holding Continue Button / Label
+        display.setLayout (new TableLayout (size3));
+        display.setOpaque (false);
+        display.setVisible (true);
+        display.add (continueB, "1, 1");
+        display.add (continueL, "1, 1, c, c");
+
+        // Adding Components to Main Panel
+        expMP.add (expP, "0, 0");
+        expMP.add (display, "0, 0");
+
+        // Generating Random Friend
+        temp_label = new JLabel("<html><div align=\"center\" style=\"width: 80%\"><p>"+expNames[exp].toUpperCase()+": "+questions[question_num][9]+"</p></div></html>");
+
+        // Setting Response Properties and Adding to panel
+            temp_label.setFont (new Font("Serif", Font.BOLD, 15));
+            temp_label.setForeground (Color.WHITE);
+            expP.add(temp_label, "1, "+Integer.toString(1)+", c, TOP");    
+
+        // Dialog Box Setup and Display        
+        expDisp.setUndecorated(true);       // Hides the Top Bar
+        expDisp.setContentPane (expMP);          // Adding Panel to Dialog
+        expDisp.pack();             // Packs the Dialog
+        expDisp.validate();      // Validates the Dialog
+        expDisp.setModal(true);
+        //expDisp.setModalityType(ModalityType.APPLICATION_MODAL);        // Makes it Compulsory for User to go through the Dialog
+        expDisp.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);          // Disables the Close Button  
+        expDisp.setLocationRelativeTo(null);    // Centers Panel on Screen
+        expDisp.setVisible(true);            // Makes Dialog Visible
+        expDisp.setResizable (false);     // Disables the Maximize Button :)
+    }
+
+    private static class TransparentButtonHandler implements ActionListener 
+    {
+        public void actionPerformed (ActionEvent event) 
+        {       
+            if (event.getSource () == continueB)            // Continue Button
+            {
+                expMP3.close();
+                expDisp.dispose();
+            }
+        }
+    }
+}
+

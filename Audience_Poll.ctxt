@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=questions\ question_num
+comment0.target=void\ pollDisp(java.lang.String[][],\ int)
+comment0.text=\r\n\ This\ class\ creates\ the\ JDialog\ and\ Displays\ it\ on\ the\ Screen.\r\n\ \r\n\ @param\ questions\ \ \ \ \ \ \ \ \ A\ double\ String\ that\ contains\ the\ questions\ that\ are\ being\ used\ for\ the\ current\ game\ play.\r\n\ @param\ question_num\ \ \ \ \ \ An\ int\ that\ tells\ the\ current\ question\ number\ with\ which\ the\ user\ needs\ help.\r\n
+numComments=1
