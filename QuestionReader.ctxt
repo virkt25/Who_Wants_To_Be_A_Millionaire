@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ main()
-comment0.text=\r\n\ The\ main\ method\ of\ the\ QuestionReaader\ class.\ This\ method\ automatically\ generates\ the\ appropriate\ number\ of\ questions\ for\ each\ Level\ (easiest\ to\ hardest)\ and\ \r\n\ stores\ them\ in\ an\ Array.\ An\ expert\ is\ also\ selected\ and\ his/her\ responses\ are\ stored\ in\ the\ Array\ as\ well.\r\n\ \r\n\ @return\ (questions)\ \ \ \ \ \ Returns\ a\ Double\ Array\ Holding\ the\ Data\ from\ the\ File\r\n
-comment1.params=min\ max
-comment1.target=void\ numGen(int,\ int)
-comment1.text=\r\n\ This\ method\ generates\ an\ int\ between\ the\ specified\ values\ and\ if\ it\ is\ not\ already\ in\ the\ array,\ it\ stores\ it\ there.\r\n\ \r\n\ @param\ min\ \ \ \ \ \ \ \ \ \ \ The\ smallest\ number\ that\ can\ be\ generated\r\n\ @param\ max\ \ \ \ \ \ \ \ \ \ \ The\ largest\ number\ that\ can\ be\ generated\r\n
-numComments=2

@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=ImagePanel\ showPanel()
-comment0.text=\r\n\ This\ method\ sets\ up\ the\ variables\ and\ lays\ out\ the\ components\ on\ the\ Screen\ to\ create\ the\ Experts\ Menu\ Panel.\r\n\ \r\n\ @return\ \ \ \ \ \ Returns\ the\ Experts\ Menu\ Panel\ ---\ ImagePanel\r\n
-comment1.params=exp
-comment1.target=void\ expertsDisp(int)
-comment1.text=\r\n\ This\ class\ updates\ the\ Expert\ Display\ Panel\ to\ show\ the\ Expert\ that\ was\ selected.\r\n\ It\ also\ makes\ the\ Expert\ Panel\ Visible.\r\n
-numComments=2
